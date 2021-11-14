@@ -41,9 +41,18 @@
 
     }
     .portrait{
-        background: url(../img/mus.jfif);
+        background: url(../img/MyPic.jfif);
         height: 150px;
         width: 150px;
+    }
+    .about-info{
+        grid-template-areas:
+        'bio-image'
+        'bio'
+        'training1'
+        'training2'
+        'training3';
+        grid-template-columns:1fr;
     }
 
 }

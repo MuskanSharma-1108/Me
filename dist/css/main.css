@@ -99,7 +99,7 @@
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(../img/muskan.jfif);
+  background: url(../img/MyPic.jfif);
   background-size: cover;
   border-radius: 50%;
   border: solid 3px #2C272E;
@@ -161,52 +161,6 @@
 .nav-items:nth-child(5) {
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  ul.menu-nav.show,
-  div.menu-branding.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .menu-nav {
-    height: 60vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-  .menu-branding {
-    height: 40vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  .portrait {
-    background: url(../img/mus.jfif);
-    height: 150px;
-    width: 150px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh;
-  }
 }
 
 * {
@@ -272,7 +226,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh-60px);
 }
 
 main .icons {
@@ -295,5 +249,116 @@ main#home {
 
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  color: #2C272E;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 50px;
+      grid-template-areas: 'bio-image bio bio' 'training1 training2 training3';
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bio-image;
+  margin: auto;
+  border-radius: 50%;
+  border: #2C272E 3px solid;
+  size: 10px;
+}
+
+.bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.training1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: training1;
+}
+
+.training2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: training2;
+}
+
+.training3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: training3;
+}
+
+.training {
+  background: #c597ff;
+  padding: 0.5rem;
+  border-bottom: #2C272E 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #9c50ff;
+  color: #fff;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 60vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+  .menu-branding {
+    height: 40vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  .portrait {
+    background: url(../img/MyPic.jfif);
+    height: 150px;
+    width: 150px;
+  }
+  .about-info {
+        grid-template-areas: 'bio-image' 'bio' 'training1' 'training2' 'training3';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
