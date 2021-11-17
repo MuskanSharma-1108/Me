@@ -12,7 +12,7 @@ body{
     color: #fff;
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Mali', cursive;
     line-height: 1.5;
 }
 //Headings
@@ -72,6 +72,8 @@ main{
     'bio-image bio bio'
     'training1 training2 training3';
     grid-template-columns: repeat(3,1fr);
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
 
 }
 .bio-image{
@@ -100,6 +102,20 @@ main{
     background: lighten($primary-color,4);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+}
+.technologies{
+    display: inline-block;
+    margin: 25px 10px;
+    text-align: center;
+    color: $secondary-color;
+    font-size: 18px;
+}
+.tools{
+    display: inline-block;
+    margin: 25px 10px;
+    text-align: center;
+    color: $secondary-color;
+    font-size: 18px;
 }
 #main-footer{
     text-align: center;
