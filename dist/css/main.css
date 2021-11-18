@@ -226,7 +226,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px);
+  min-height: calc(100vh-60vh);
 }
 
 main .icons {
@@ -305,6 +305,43 @@ main#home h1 {
   border-bottom: #2C272E 5px solid;
 }
 
+.boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.boxes span {
+  color: #2C272E;
+}
+
+.boxes div {
+  font-size: 2rem;
+  border: 3px #2C272E solid;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #2C272E;
+}
+
+.boxes div:hover span {
+  color: #B983FF;
+}
+
 .technologies {
   display: inline-block;
   margin: 25px 10px;
@@ -327,6 +364,15 @@ main#home h1 {
   background: #9c50ff;
   color: #fff;
   height: 60px;
+}
+
+#contact-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #9c50ff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -371,6 +417,17 @@ main#home h1 {
         grid-template-areas: 'bio-image' 'bio' 'training1' 'training2' 'training3';
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  #contact-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #9c50ff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  .boxes div {
+    font-size: 1.2rem;
   }
 }
 
